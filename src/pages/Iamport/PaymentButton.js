@@ -44,7 +44,7 @@ const callback = async (response) => {
 };
 const onClickPayment = ({info}) => {
   const { IMP } = window;
-  IMP.init("imp77220765"); // 가맹점 식별코드
+  IMP.init(process.env.IAMPORT_IDENTIFICATION_CODE); // 가맹점 식별코드
   let pg = "";
   let pay_method = "";
   if (info.payMethod === "신용카드") {
